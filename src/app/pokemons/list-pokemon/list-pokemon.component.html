@@ -1,0 +1,69 @@
+
+<h1 class="center">Pokemons</h1>
+<div class="container">
+<div class="row">
+
+<app-search-pokemon></app-search-pokemon>
+
+<div *ngFor="let pok of pokemons" class="col s6 m4">
+    <div class="card horizontal" (click)="selectPokemon(pok)" pkmnBorderCard>
+        <div class="card-image">
+            <img [src]="pok.picture">    
+        </div>
+        <div class="card-stacked">
+            <div class="card-content">
+                <p>{{ pok.name }}</p>
+                <p><small>{{ pok.created  | date:"dd/MM/yyyy" }}</small></p>
+                <span *ngFor='let type of pok.types'
+                class='{{type | pokemonTypeColor}}'> {{ type }}</span>
+            </div>
+        </div>
+    </div>
+</div>    
+</div>    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--ngIf
+    <p *ngIf = "age > 18">Ceci est un message destiné aux personnes majeures</p>
+-->
+<!--
+    keyup.enter et blur
+    <input #box (keyup.enter)="values = box.value" (blur)="values = box.value">
+    <p>{{values}}</p>
+-->
+
+
+<!--
+    1ère étape
+<div *ngIf="pokemons && pokemons.length>0" >
+    <ul>
+    <li *ngFor="let pok of pokemons">{{pok}}</li>
+    </ul>
+</div>
+
+<button (click) = "onClick()">Cliquez ici !</button>
+<input #box (keyup)="onKey(box.value)">
+<p>{{ box.value }}</p>
+<p>{{ value }}</p>
+-->
