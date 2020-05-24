@@ -5,12 +5,13 @@ import { ListPokemonComponent }    from './list-pokemon/list-pokemon.component';
 import { DetailPokemonComponent }  from './detail-pokemon/detail-pokemon.component';
 import { EditPokemonComponent } from './edit-pokemon/edit-pokemon.component';  
 
+import { AuthGuard } from '../auth-guard.service';
 
 
 // les routes du module Pokémon
 const pokemonsRoutes: Routes = [
     { path: 'pokemons', component: ListPokemonComponent },
-    { path: 'pokemon/edit/:id', component: EditPokemonComponent},
+    { path: 'pokemon/edit/:id', component: EditPokemonComponent, canActivate: [AuthGuard]},
     { path: 'pokemon/:id', component: DetailPokemonComponent }
 ];
   
