@@ -6,7 +6,7 @@ import { PageNotFoundComponent } from './page-not-found.component';
 // les routes les plus précises doivent être déclarées en premier
 // les routes plus générales doivent être déclarées à la fin
 const appRoutes: Routes = [
-    { path: '', redirectTo: 'pokemons', pathMatch: 'full' },
+    { path: '', redirectTo: 'pokemon/all', pathMatch: 'full' },
     { path: '**', component: PageNotFoundComponent}
 ];
   

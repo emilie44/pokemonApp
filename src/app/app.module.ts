@@ -9,6 +9,7 @@ import { InMemoryDataService } from './in-memory-data.service';
 
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { PageNotFoundComponent } from './page-not-found.component';
   declarations: [
     AppComponent,
     PageNotFoundComponent,
+    LoginComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

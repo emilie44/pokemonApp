@@ -31,7 +31,7 @@ export class DetailPokemonComponent implements OnInit {
 }                                 // une fois le pkm supp redirection vers la liste de pkm moins celui supp
 
   goBack(): void {
-    this.router.navigate(['/pokemons']);
+    this.router.navigate(['/pokemon/all']);
   }
 
   goEdit(pokemon: Pokemon): void {
