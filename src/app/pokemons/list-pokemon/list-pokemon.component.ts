@@ -13,12 +13,12 @@ import { from } from 'rxjs';
 })
 
 export class ListPokemonComponent implements OnInit{
-    
+
     pokemons: Pokemon[] = null;
 
-    constructor(private router:Router, 
+    constructor(private router:Router,
                 private pokemonsService: PokemonsService){ };
-  
+
 ngOnInit(){
   this.getPokemons();
 }
